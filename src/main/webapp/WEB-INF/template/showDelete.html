@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="form">
+    <form action="#" th:action="@{/product/delete}" method="post" th:object="${product}">
+        <table>
+            <input type="hidden" th:field="${product.id}">
+            <tr>
+                <td>Name</td>
+                <td th:text="${product.id}"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td th:text="${product.name}"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

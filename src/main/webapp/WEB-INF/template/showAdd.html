@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Add more Student</h2>
+<div id="backToList">
+    <a th:href="@{/}">Back To List</a>
+</div>
+<div id="form">
+    <form method="post" th:action="@{/product/addProduct}" th:object="${product}">
+        <table>
+            <tr>
+                <td>ID</td>
+                <td><input type="text" th:field="${product.id}"/></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" th:field="${product.name}"/></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Add"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

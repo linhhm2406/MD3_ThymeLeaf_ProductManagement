@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="form">
+    <form action="#" th:action="@{/product/edit}" method="post" th:object="${product}">
+        <table>
+            <input type="hidden" th:field="${product.id}">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" th:field="${product.name}"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
